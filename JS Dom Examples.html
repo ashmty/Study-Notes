@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JS Dom Examples</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <div class="intro">
+     <h1>Dom Examples </h1>
+  </div>
+  <div class="body">
+      <div class="Dom">
+          <h1>The Dom:</h1>
+            <p>let val;
+                  <br>
+                  val = document;
+                  <br>
+                  val = document.all;
+                  <br>
+                  val = document.all[2];
+                  <br>
+                  val = document.all.length;
+                  <br>
+                  val = document.head;
+                  <br>
+                  val = document.body;
+                  <br>
+                  val = document.doctype;
+                  <br>
+                  val = document.domain;
+                  <br>
+                  val = document.URL;
+                  <br>
+                  val = document.characterSet;
+                  <br>
+                  val = document.contentType;
+                  <br>
+                  <br><br><br>
+
+                  val = document.forms;
+                  <br>
+                  val = document.forms[0];
+                  <br>
+                  val = document.forms[0].id;
+                  <br>
+                  val = document.forms[0].method;<br>
+                  val = document.forms[0].action;<br><br><br>
+
+                  val = document.links;<br>
+                  val = document.links[0];<br>
+                  val = document.links[0].id;<br>
+                  val = document.links[0].className;<br>
+                  val = document.links[0].classList[0];<br>
+
+                  val = document.images;<br>
+
+                  val = document.scripts;<br>
+                  val = document.scripts[2].getAttribute('src');<br>
+
+                  let scripts = document.scripts;<br>
+
+                  let scriptsArr = Array.from(scripts);<br>
+                  
+                  scriptsArr.forEach(function(script) {<br>
+                    console.log(script.getAttribute('src'));<br>
+                  });
+
+                  console.log(val);<br>
+          </p>
+        </div>
+        <div class="dom selectors">
+          <h1>dom selectors</h1>
+            <h2>getElementById</h2>
+            document.getElementById()<br>
+
+            console.log(document.getElementById('task-title'));<br>
+            
+            Get things from the element<br>
+            console.log(document.getElementById('task-title').id);<br>
+            console.log(document.getElementById('task-title').className);<br>
+            
+            const taskTitle = document.getElementById('task-title');<br>
+            
+            <h2>Change styling</h2>
+            taskTitle.style.background = '#333';<br>
+            taskTitle.style.color = '#fff';<br>
+            taskTitle.style.padding = '5px';<br>
+            taskTitle.style.display = 'none';<br>
+            
+           <h2>Change content</h2>
+            taskTitle.textContent = 'Task List';<br>
+            taskTitle.innerText = 'My Tasks';<br>
+            taskTitle.innerHTML = '< span style="color:red">Task List< /span>';<br>
+            
+            <h2>document.querySelector()</h2>
+            
+            console.log(document.querySelector('#task-title'));<br>
+            console.log(document.querySelector('.card-title'));<br>
+            console.log(document.querySelector('h4'));<br>
+            
+            document.querySelector('li').style.color = 'red';<br>
+            document.querySelector('ul li').style.color = 'blue';<br>
+            
+            document.querySelector('li:last-child').style.color = 'red';<br>
+            document.querySelector('li:nth-child(3)').style.color = 'yellow';<br>
+            document.querySelector('li:nth-child(4)').textContent = 'Hello World';<br>
+            document.querySelector('li:nth-child(odd)').style.background = '#ccc';<br>
+            document.querySelector('li:nth-child(even)').style.background = '#f4f4f4';<br>
+            
+            <h2> document.getElementsByClassName</h2>
+
+            const items = document.getElementsByClassName('collection-item');<br>
+            console.log(items);<br>
+            console.log(items[0]);<br>
+            items[0].style.color = 'red';<br>
+            items[3].textContent = 'Hello';<br>
+
+            const listItems = document.querySelector('ul').getElementsByClassName('collection-item')<br>
+
+            console.log(listItems);<br>
+            <h2> document.getElementsByTagName</h2>
+            document.getElementsByTagName<br>
+            let lis = document.getElementsByTagName('li');<br>
+            console.log(lis);<br>
+            console.log(lis[0]);<br>
+            lis[0].style.color = 'red';<br>
+            lis[3].textContent = 'Hello';<br>
+
+            <h2>Conver HTML Collection into array</h2>
+            lis = Array.from(lis);<br>
+
+            lis.reverse();<br>
+
+            lis.forEach(function(li, index){<br>
+              console.log(li.className);<br>
+              li.textContent = `${index}: Hello`;<br>
+            });<br>
+
+            console.log(lis);<br>
+
+            <h2>document.querySelectorAll</h2>
+            const items = document.querySelectorAll('ul.collection li.collection-item');<br>
+
+            items.forEach(function(item, index){<br>
+                item.textContent = `${index}: Hello`;<br>
+            });<br>
+
+            const liOdd = document.querySelectorAll('li:nth-child(odd)');<br>
+            const liEven = document.querySelectorAll('li:nth-child(even)');<br>
+            <br>
+            liOdd.forEach(function(li, index){<br>
+              li.style.background = '#ccc';<br>
+            });<br>
+            <br>
+            for(let i = 0; i < liEven.length; i++){<br></liEven.length>
+              liEven[i].style.background = '#f4f4f4';<br>
+            }<br>
+            <br><br>
+
+            console.log(items);<br>
+                    <hr>
+              <h2>Traversing the Dom</h2>
+
+            const list = document.querySelector('ul.collection');<br>
+            const listItem = document.querySelector('li.collection-item:first-child');<br>
+
+            val = listItem;<br>
+            val = list;<br>
+
+            <h2>Get child nodes</h2>
+            val = list.childNodes;<br>
+            val = list.childNodes[0];<br>
+            val = list.childNodes[0].nodeName;<br>
+            val = list.childNodes[3].nodeType;<br>
+            <br>
+             1 - Element<br>
+             2 - Attribute (deprecated)<br>
+             3 - Text node<br>
+             8 - Comment<br>
+             9 - Document itself<br>
+             10 - Doctype<br>
+            <br><br>
+
+            <h2>Get children element nodes</h2>
+            val = list.children;<br>
+            val = list.children[1];<br>
+            list.children[1].textContent = 'Hello';<br>
+            <h2> Children of children</h2>
+            list.children[3].children[0].id = 'test-link';<br>
+            val = list.children[3].children[0];<br>
+
+            <h2>First child</h2>
+            val = list.firstChild;<br>
+            val = list.firstElementChild;<br>
+
+            <h2>Last child</h2>
+            val = list.lastChild;<br>
+            val = list.lastElementChild;<br>
+
+            <h2>Count child elements</h2>
+            val = list.childElementCount;<br>
+
+            <h2>Get parent node</h2>
+            val = listItem.parentNode;<br>
+            val = listItem.parentElement;<br>
+            val = listItem.parentElement.parentElement;<br>
+
+            <h2>Get next sibling</h2>
+            val = listItem.nextSibling;<br>
+            val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;<br>
+
+            <h2>Get prev sibling</h2>
+            val = listItem.previousSibling;<br>
+            val = listItem.previousElementSibling;<br>
+            console.log(val);<br>
+
+            <h1>Create element</h1>
+            const li  = document.createElement('li');<br>
+
+            <h2>Add class</h2>
+            li.className = 'collection-item';<br>
+
+            <h2> Add id</h2>
+            li.id = 'new-item';<br>
+
+            <h2> Add attribute</h2>
+            li.setAttribute('title', 'New Item');<br>
+
+            <h2> Create text node and append</h2>
+            li.appendChild(document.createTextNode('Hello World'));<br>
+
+            <h2> Create new link element</h2>
+            const link = document.createElement('a');<br>
+            <h2> Add classes</h2>
+            link.className = 'delete-item secondary-content';<br>
+            <h2> Add icon html</h2>
+            link.innerHTML = '<i class="fa fa-remove"></i>';<br>
+
+            <h2> Append link into li</h2>
+            li.appendChild(link);<br>
+
+            <h2> Append li as child to ul</h2>
+            document.querySelector('ul.collection').appendChild(li);<br>
+
+            console.log(li);<br>
+            <hr>  
+            <h1>REPLACE ELEMENT</h1>
+
+            <h2>Create Element</h2>
+            const newHeading = document.createElement('h2');<br>
+            <h2> Add id</h2>
+            newHeading.id = 'task-title'; <br>
+            <h2> New text node</h2>
+            newHeading.appendChild(document.createTextNode('Task List')); <br>
+            
+            <h2> Get the old heading</h2>
+            const oldHeading = document.getElementById('task-title');<br>
+            <h2>Parent</h2>
+            const cardAction = document.querySelector('.card-action');<br>
+            
+            <h2>Replace</h2>
+            cardAction.replaceChild(newHeading, oldHeading);<br>
+            
+            <h2> REMOVE ELEMENT</h2>
+            const lis = document.querySelectorAll('li');<br>
+            const list = document.querySelector('ul');<br>
+            
+            <h2> Remove list item</h2>
+            lis[0].remove();<br>
+            
+            <h2> Remove child element</h2>
+            list.removeChild(lis[3]);
+            <hr>
+            <h1> CLASSES & ATTR</h1>
+            const firstLi = document.querySelector('li:first-child');<br>
+            const link = firstLi.children[0];<br>
+            
+            let val;<br>
+            
+            <h2> Classes</h2>
+            val = link.className;<br>
+            val = link.classList;<br>
+            val = link.classList[0];<br>
+            link.classList.add('test');<br>
+            link.classList.remove('test');<br>
+            val = link;<br>
+            
+            <h2> Attributes</h2>
+            val = link.getAttribute('href'); <br>
+            val = link.setAttribute('href', 'http google.com');<br>
+            link.setAttribute('title', 'Google');<br>
+            val = link.hasAttribute('title');<br>
+            link.removeAttribute('title');<br>
+            val = link;<br>
+            
+            console.log(val);<br>
+
+
+            <hr>
+            <h1>addEventListener</h1>
+
+            Syntax: document.querySelector('.clear-tasks').addEventListener('click', function(e){ <br>
+                 console.log('Hello World'); <br>
+              <br>
+              e.preventDefault();<br>
+              });<br>
+              <h2>or we use e as a parameter in the function</h2>
+              <br>
+              document.querySelector('.clear-tasks').addEventListener('click', onClick);<br>
+              <br>
+              function onClick(e){<br>
+                console.log('Clicked');<br>
+              
+                let val;<br>
+              
+                val = e;<br>
+              
+                <h2> Event target element</h2>
+                val = e.target;<br>
+                val = e.target.id;<br>
+                val = e.target.className;<br>
+                val = e.target.classList;<br>
+              
+               <h2> Event type</h2>
+                 
+                val = e.type;<br>
+              
+                <h2> Timestamp</h2>
+                val = e.timeStamp;<br>
+              
+                <h2> Coords event relative to the window</h2>
+                val = e.clientY;<br>
+                val = e.clientX;<br>
+              
+                <h2> Coords event relative to the element</h2>
+                val = e.offsetY;<br>
+                val = e.offsetX;<br>
+              
+                console.log(val);<br>
+              }
+            
+              <hr>
+
+
+              <h2>Mouse Events Examples</h2>
+              const clearBtn = document.querySelector('.clear-tasks');<br>
+              const card = document.querySelector('.card');<br>
+              const heading = document.querySelector('h5');<br>
+
+               <h4>Click</h4>
+               clearBtn.addEventListener('click', runEvent);
+               <h4>Doubleclick</h4>
+               clearBtn.addEventListener('dblclick', runEvent);
+               <h4>Mousedown</h4>
+               clearBtn.addEventListener('mousedown', runEvent);
+               <h4>Mouseup</h4>
+               clearBtn.addEventListener('mouseup', runEvent);
+               <h4>Mouseenter</h4>
+               card.addEventListener('mouseenter', runEvent);
+               <h4>Mouseleave</h4>
+               card.addEventListener('mouseleave', runEvent);
+               <h4>Mouseover</h4>
+               card.addEventListener('mouseover', runEvent);
+               <h4>Mouseout</h4>
+               card.addEventListener('mouseout', runEvent);
+               <h4>Mousemove</h4>
+              card.addEventListener('mousemove', runEvent);
+
+               <h2>Event Handler</h2>
+                function runEvent(e) {<br>
+                console.log(`EVENT TYPE: ${e.type}`);<br>
+
+                heading.textContent= `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;<br>
+
+                document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;<br>
+               } <br>
+
+            
+
+            
+        
+          
+        </div>
+  </div>
+
+
+
+  
+</body>
+</html>

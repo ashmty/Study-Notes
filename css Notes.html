@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Css Notes </title>
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>
+<body>
+				<div class="Intro all">
+				<h1>Css. Cascading Style Sheets</h1><span><h2>Skin for <a href="html notes.html">Html</a></h2></span>
+				</div>
+
+				<div class="list all">
+				<ol>
+								<li class="Mainlist"><H2>General info</H2>
+									<ol>
+											<li>Linking to Html, or just link on sublime < link href="./style.css" type="text/css" rel="stylesheet"> </li>
+											<li>Css use Selectors to target Html Parts <br> <img class="selector" src="./images/css.jpg" alt="css Selectors"></li>
+									</ol>
+								</li>
+
+
+								<li class="Mainlist"><h2> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors" target="_blank">Selectors Specificity </a> Inline>Id>Class>Tags</h2> Ps. If 2 class for the same item, the browser takes the one that comes last
+									<ol>
+											<li>Inline Style < h1 style="declaration ; " or Internal Style Sheet < style> Css declaration  < /style></li>
+											<li><strong>Tags</strong> eg. < p > ,< H1> = selector is the name of the Element         <em>P{ }</em> </li>
+											<li><strong>Class attribute</strong> , to a many element with the class eg. Class="Special" . Selector is           <em>.special{ }</em> , you can use more than one class for 1 Element,use a space "1 2"</li>
+											<li><strong>Id Name:</strong> only for one specific Element, and in the css is used as #</li>
+											<li><strong>Chaining Selectors</strong> eg. (h1 .special) = only the h1 tag will have the style from the special selector</li>
+											<li><strong>Universal Selector *</strong></li>
+											<li><strong>!important:</strong> if added in the end of the Selector will overide any other rule eg. P { color: blue !important;} all P will be blue even if id or class </li>
+											<li><strong>Combination Selectors:</strong>
+														<ul>
+															<li>Chaining and Specificity: General rule < specific rule </li>
+															<li><strong>Descendant combinator:</strong> A B "space in between" eg. Div Span {} applied to the span inside the Div, so it's applied to the child inside tha parent class</li>
+															<li>Grouping Multiple Selectors: eg. <i>th, td, p.red, div#firstred { color: red; }</i></li>
+												    </ul>
+											</li>
+									</ol>
+								</li>
+
+
+								<li class="Mainlist"><h2><strong><a href="">CSS VISUAL RULES</a></strong></h2>
+									<ol>
+										<li><strong>Fonts: (typography)</strong>
+												<ul class="fonts">
+														<li><strong>Font Family:</strong>To change font type. {Font-family: font name}
+																<ul>
+																	<li>Fall back font: when a font is not available, the system fall back to this font : h1 {font-family: "Garamond", "Times", serif;} the 1ry and 2ry need "" while the fall back no</li>
+
+																</ul>
+
+														</li>
+														<li>Font Size</li>
+														<li><strong>Font-weight:</strong>Bold/normal or it can be assigned to a value where 400 is the ddefault, 700 is bold ,
+														and 300 is light. {font-weight: }</li>
+														<li><strong>Font style:</strong>{font-style: italic}</li>
+														<li><strong>Word Spacing:</strong>normal is 0.25 em, {word-spacing: 0.3em;}</li>
+														<li><strong>letter spacing:</strong>{letter-spacing: 0.3em;}</li>
+														<li><strong>Text Align</strong>: left Centre right</li>
+														<li><strong>Text Transform:</strong> {Text Transform: uppercase=<span id="uppercase">uppercase</span> ; LOWERCASE=<span id="lowercase">LOWERCASE</span> ; capitalize=<span id="capitalize">capitalize;</span>}</li>
+														<li><strong>Line Height Anatomy:</strong> make text on a web page easier to read. can be used as px or absolute value of 1.2 and above  <img src="./images/font.png" alt="font img" id="font"></li>
+														<li><strong>Text Decoration:</strong> {non ; underline ; strike though}</li>
+														<li><strong>Linking Fonts:</strong>to html file using <a href="https://fonts.google.com/">google fonts</a> and then add the link to title  <b><em> or</em></b> </li>
+														<li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/%40font-face">Font-Face:</a></strong>to link the font to the css instead of html, can be used for local fonts files as well  </li>
+													</ul>
+											</li>
+										<li>Color / background-color</li>
+										<li>Opacity from 0 (fully invisible) to ( fully visible ) 1 </li>
+										<li>Background Image:  background-image: url("images.jpg") * background-image takes a url() with an image path, background-image: url("paper.gif");
+								background-repeat: repeat-y; ( we can make the repeat verical or horizontal )	</li>
+										<li> <b>Image Effects: </b> <i>circle</i> border-radius: 50%; ;
+
+										</li>
+									</ol>
+								</li>
+
+
+								<li class="Mainlist"><h2>The Box Model:</h2> <img src="./images/Box model.png" alt="Box Model" class="boxmodel">
+															we can use px/em/ % best for responsiveness
+															<ol>
+																<li><strong>Width and height: </strong> specifies the width and height of the content area
+																	<ul>
+																		<li>min-width/max-width</li>
+																		<li>min-width/max-widthheight </li>
+																	</ul>
+
+														</li>
+														<li><strong>Padding:</strong>
+																<ul>
+																	<li> specifies the amount of space between the content area and the border.</li>
+																	<li>padding-top/padding-right/padding-bottom/padding-left</li>
+																	<li>1 vlaue = 4 corners</li>
+																	<li>2 values = top/buttom left/right</li>
+																	<li>3 values = top left/right burrom</li>
+																	<li>4 values = top right bottm left: clock wise from the top </li>
+
+
+
+																</ul>
+														padding-top/padding-right/padding-bottom/padding-left</li>
+														<li><strong>Border:  </strong> 3px solid color
+																<ul>
+																	<li>specifies the thickness and style of the border surrounding the content area and padding. ( width/style:non,dotted,solid/color )</li>
+																	<li><strong>Border Radius:</strong>will make radius to the border just add the px </li>
+																</ul>
+
+															</li>
+														<li><strong>Margin:</strong>
+																<ul>
+																	<li>specifies the amount of space between the border and the outside edge of the element.</li>
+																	<li>Can be use to centre the element in relation to the parent { Margin: 0 auto; }top 0 and left and right auto </li>
+																	<li>Margin Collapse: vertical margins: top and bottom margins, collapse, while top and bottom margins does not: the larger of the two vertical margins sets the distance between adjacent elements</li>
+																</ul>
+														<li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow">Overflow:</a></strong>
+																<ul>
+																	<li>Hidden</li>
+																	<li>scroll</li>
+																	<li>visible</li>
+																	<li>auto</li>
+
+																</ul>
+														</li>
+														<li><strong>Resetting Defaults:</strong></li>{ margin: 0;padding: 0; }
+
+														<li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing">Border-box:</a></strong>include everthing in the specified size * { box-sizing: border-box;} </li>
+														<li><strong>Visibility:</strong></li>hidden /Visible
+																	</li>
+													</ol>
+									</li>
+
+
+
+									<li class="Mainlist"><h2><strong>CSS DISPLAY AND POSITIONING:</strong></h2>
+																					<ol>
+																						<li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" target="_blank">Position:</a></strong>
+																							<ol><li>Static: default value</li>
+																								<li>Relative: Relative to its default static position on the web page.<em>Top:</em> moves down,<em>Bottom:</em> moves up <em>Left:</em> moves right <em>Right:</em> moves lef </li>
+																								<li>Absolute: (can overlap) All other elements on the page will ignore the element and act like it is not present on the page, have to be in relation to the first relative element </li>
+																								<li>Fixed: element will scroll with the rest of the document when a user scrolls</li>
+																							</ol>
+																						</li>
+																						<li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index" target="_blank">Z-Index: </a></strong> overlay of Boxes 1 on top , 2 then 3 , will be ignored if static </li>
+
+																					    <li><strong>Display: </strong>{display: }
+																					    	    <ul>
+																									<li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements" target="_blank">Inline Display:</a></strong> only occupy the space bounded by the tags defining the element, like Bold dont affect the flow eg . strong, em ( same line as the element )</li>
+																									<li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements" target="_blank">Block Display</a></strong> A block-level element occupies the entire space of its parent element (container)</li>
+																									<li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements#Inline_vs._block-level_elements_a_demonstration" target="_blank">Inline-Block</a></strong></li>
+																									<li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float" target="_blank">Float:</a></strong></li> left or right .
+																									<li><strong><a href="">Clear:</a></strong>to resolve float issues : {clear: left/right/both/non ;}</li>
+																								</ul>
+																						</li>
+																					</ol>
+									</li>
+
+									<li class="Mainlist"><h2><strong>Colors in CSS</strong></h2></li>
+										<ul>
+											<li>foreground: {color:vlaue} </li>
+											<li>Background: { background-color: Value}</li>
+											<li><a href="https://www.w3schools.com/colors/colors_picker.asp">Color Values: Hexadecimal</a> eg. black #000000</li>
+											<li>RGB Colors: { color: rgb(23,45,23) } </li>
+											<li>Hue, Saturation, and Lightness: { color: hsl(120, 60%, 70%);}
+
+											<!-- 	<img src=""> -->
+													<ul><li>Hue is the first number. It refers to an angle on a color wheel. Red is 0 degrees, Green is 120 degrees, Blue is 240 degrees, and then back to Red at 360
+														<img id="color" src="./images/color.svg"></li>
+														<li>Saturation refers to the intensity or purity of the color</li>
+														<li>Lightness refers to how light or dark the color is. Halfway, or 50%, is normal lightness. </li>
+														<li>Opacity and Alpha:used for rgba, and hsla</li>hsla/rgba: Where the a indicate the opacity, {color: hsla(34, 100%, 50%, 0.1);} , 0=transparent, 1=Not transparent.
+
+													</ul>
+
+											</li>
+										</ul>
+								<li><h2><strong>CSS Grid</strong></h2>
+											<ol>
+												  <li><strong>Creating a Grid:</strong>Needs grid container and grid items,Parent selector {display: grid;} for Block Elements, or {display: inline-grid;}, There are two axes in a grid layout — the column (or block) axis and the row (or inline) axis.
+
+														 <ul>
+															 <li>By default the Grid have only 1 column</li>
+																<li>to specify the columns and sizes : {grid-template-columns:10 20 30} for 3 columns the value </li>
+																<li>to specify rows and sizes: {grid-template-rows: 10px 20% 30em }</li>
+																<li>to replace both Values above: {grid-template: 200px 300px ( rows ) / 20% 10% 70% ( columns)}</li>
+															</ul>
+													</li>
+																<li><strong>fr:</strong> unit to divide available space between rows and columns <img src="./images/Grid fr.jpg" alt="" id="fr">
+																in this Example 60px out of 100px leaves 40px divided between 2  </li>
+																<li><strong>Repeat:</strong> {grid-template-columns: repeat(3, 100px)} this value will repeat it 3 times, so instaed of writting {grid-template-columns: 100px 100px 100px;}</li>
+																<li><strong>minmax:</strong> for the grid part not to go smaller than a specific size {grid-template-columns: 100px minmax(100px, 500px) 100px;} so the first and the third have a specific size while the one in the middle change with the browser</li>
+																<li><strong>Grid Gap:</strong> allow space between the items in the grid, it will not add space at the beginning or end of the grid {grid-row-gap:}or {grid-column-gap} or {grid-gap:rows column} ps. no / inbetween</li>
+																<li><strong>Multiple Row Items:</strong> Row grid lines and column grid lines start at 1 and end at a value that is 1 greater than the number of rows or columns the grid has
+																		<ul>
+																			<li> <strong> grid-row-start and grid-row-end</strong> where always the value of end is higher than the needed value eg. rows from 2 to 3 = start 2 , end 4</li>
+																			<li>shortcute : grid-row { start / end }</li>
+																			<li>Span: till the browser to span over 2 cells, {grid-column: 4 / span 2;} start at 4 and join 2 cells</li>
+																			<li>Grid-area: shortcute for spanning rows and cloumns for 1 cell ; {grid-area: 2 grid-row-start/ 3 grid-row-end/ 4  grid-column-start / 5 grid-column-end }</li>
+																		</ul>
+																<li><strong>Grid-template-areas:</strong> <img src="./images/grid area 1.jpg" alt="" id="gr"> <img src="./images/grid area 2.jpg" alt="" id="gaa"> allows you to name sections of your web page to use as values in the grid-row-start, grid-row-end, grid-col-start,grid-col-end, and grid-area
+																			<ul>
+																				<li>Each area is called for how many cells in the grid</li>
+																				<li>Each item gets a {grid-area: name for each block}</li>
+																			</ul>
+															 <li><strong>Overlapping Elements:</strong> Css grid allows over lapping of cells , just add z-inedx:5 for the top level.</li>
+															 <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout#Justifying_Items_on_the_Inline_or_Row_Axis"  target="_blank">Justify-items:</a></strong> is a property that positions <strong>Grid items</strong> along the inline, or row, axis. This means that it positions items from <em> left to right </em>across the web page. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items#Values" target="_blank">Demo</a>
+																 			<ul>
+																 				<li>start — aligns grid items to the left side of the grid area</li>
+																				<li>end — aligns grid items to the right side of the grid area</li>
+																				<li>center — aligns grid items to the center of the grid area</li>
+																				<li>stretch — stretches all items to fill the grid area</li>
+																 			</ul>
+															 </li>
+															 <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout#Aligning_the_grid_tracks_on_the_block_or_column_axis" target="_blank">Justify Content:</a> </strong>position a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content#Values" target="_blank"><strong>Grid</strong></a> within its parent element. works when we specify grid width bigger than it's elements.
+																				 <ol>
+																					 	  <li>start — aligns the grid to the left side of the grid container.</li>
+																							<li>end — aligns the grid to the right side of the grid container</li>
+																							<li>center — centers the grid horizontally in the grid container</li>
+																							<li>stretch — stretches the grid items to increase the size of the grid to expand horizontally across the container</li>
+																							<li>space-around — includes an equal amount of space on each side of a grid element, resulting in double the amount of space between elements as there is before the first and after the last element</li>
+																							<li>space-between — includes an equal amount of space between grid items and no space at either end</li>
+																							<li>space-evenly — places an even amount of space between grid items and at either end</li>
+																				 </ol>
+															 </li>
+															 <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout#Aligning_items_on_the_block_or_column_Axis" target="_blank">Align Items:</a></strong> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items#Values" target="_blank"> Demo: </a>position grid items from <em>top to bottom</em>
+															 						<ol>
+															 							<li>start — aligns grid items to the top side of the grid area</li>
+																						<li>end — aligns grid items to the bottom side of the grid area</li>
+																						<li>center — aligns grid items to the center of the grid area</li>
+																					  <li>stretch — stretches all items to fill the grid area</li>
+															 						</ol>
+																</li>
+																<li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout#Aligning_the_grid_tracks_on_the_block_or_column_axis" target="_blank">Align Content:</a></strong> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-content#Values" target="_blank">Demo: </a>positions the rows along the column axis, or from top to bottom.
+																					<ol>
+																						<li>start — aligns the grid to the top of the grid container</li>
+																						<li>end — aligns the grid to the bottom of the grid container</li>
+																						<li>center — centers the grid vertically in the grid container</li>
+																						<li>stretch — stretches the grid items to increase the size of the grid to expand vertically across the container</li>
+																						<li>space-around — includes an equal amount of space on each side of a grid element, resulting in double the amount of space between elements as there is before the first and after the last element</li>
+																						<li>space-between — includes an equal amount of space between grid items and no space at either end</li>
+																						<li>space-evenly — places an even amount of space between grid items and at either end</li>
+
+																					</ol>
+																</li>
+																<li><b><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout#Aligning_the_grid_tracks_on_the_block_or_column_axis" target="_blank">Justify Self and Align Self</a></b>is for the grid child elements. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-self#Values" target="_blank">  Demo:  </a> <b>Justify-self:</b>(left and right) specifies how an individual element should position itself with respect to the row axis, <b>Align Self:</b>  specifies how an individual element should position itself with respect to the column axis. <b>works on each individal Block (specific)</b>
+																					<ol>
+																							<li>start — positions grid items on the left side/top of the grid area</li>
+																							<li>end — positions grid items on the right side/bottom of the grid area</li>
+																							<li>center — positions grid items on the center of the grid area</li>
+																							<li>stretch — positions grid items to fill the grid area (default)</li>
+
+																					</ol>
+																</li>
+																<li><b>Implicit vs. Explicit Grid:</b> <u><em>Explicit Grid:</em></u> predefined defining the dimensions of the grid (stable), <u><em>Implicit Grid:</em></u>automatically increase the grid size based on the data demands , The default behavior of the implicit grid is as follows: items fill up rows first, adding new rows as necessary.
+																					<ol>
+																							<li><b>Grid Auto Rows and Grid Auto Columns:</b>specifies the height of implicitly added grid rows/columns. Value could be: px,Fr,%, or repeat.</li>
+																							<li><b>Grid Auto Flow:</b>specifies whether new elements should be added to rows or columns. accepts these values: row , column, dense: attempts to fill holes earlier in the grid layout if smaller elements are added , it can accept 2 values at the same time: {grid-auto-flow: row dense;}</li>
+																					</ol>
+																</li>
+													</ol>
+										</li>
+
+									</div>
+								</body>
+				</html>

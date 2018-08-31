@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Git</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/git.css" />
+  
+</head>
+<body>
+    <div class="container">
+        <div class="intro">
+            <img src="images\git.jpeg" alt="" id="bangit">
+                  <div>
+                    <p><b><u><em><span id="gitintro">Git: </span></em></u></b>is a software that allows you to keep track of changes made to a project over time. Git works by recording the changes you make to a project, storing those changes, then allowing you to reference them as needed, Git stores this information in a data structure called a <b> repository</b></p>
+                    
+                  </div>
+
+        </div>
+        <div class='notes'>
+            <ol>
+              <li>
+                <ol><b><u><em>Git Basics:</em></u></b>
+                        <li> git init:  to initialize a new git project;in the folder where the project is Cmd : git init.</li>
+                        <li>Git Workflow: i's like having 3 parts
+                          <ul>
+                            <li> <u>A Working Directory:</u> where all the work is done: creating, editing, deleting and organizing files/li>
+                            <li><u>A Staging Area:</u> list chages made. </li>
+                            <li><u>A Repository:</u> store changes as different versions of the project </li>
+                          </ul>
+                        </li>
+                        <li>git status:  git status in cmd to check the status of the changes made.</li>
+                        <li>git add: to add files to the staging area , git add. ( add all modified files to the repo), you can add more than one file at the same time ==> git add filename_1 filename_2</li>  
+                        <li>git diff: check the differences between the working directory and the staging area</li>
+                        <li>git commit: A commit permanently stores changes from the staging area inside the repository. it must have the option -m followed by a message,Standard Conventions for Commit Messages:
+                            <ol>
+                              <li>Must be in quotation marks</li>
+                              <li> Written in the present tense</li>
+                              <li>Should be brief (50 characters or less) when using -m</li>
+                              <li>the current commit is called the head commit , and it cab be called useing git show HEAD</li>
+                            </ol>
+                        </li>
+                        <li>git log:to refer back to an earlier version of a project. </li>  
+                      <li>git --help: to get help menu from CMD</li>
+                </ol>
+               </li>
+            <li><b><u><em>Backtracking :</em></u></b>
+              <ol>
+                  <li>git checkout : will restore the file in your working directory to look exactly as it did when you last made a commit. </li>
+                  <li>git reset: This command resets the file in the staging area to be the same as the HEAD commit. It does not discard file changes from the working directory, it just removes them from the staging area. ==> git reset HEAD filename</li>
+                  <li>git reset HEAD: using the first 7 charcters of the SHA , git reset 5d69206 , this will reset the commit to the head with the hash 5d69206 </li>
+              </ol>
+            </li>
+            <li><b><u><em> git branch:</em></u></b> the main is called the master,the New Branch is a different version of the Git project. It contains commits from Master but also has commits that Master does not have. <br> ==> get branch ( give a list of branches)
+              <ol>
+                <li>Create new branch: git branch new_branch ( ps. we can use - or _ bur no spaces allowed)</li>
+                <li>git checkout branch-name: to switch to the branch from the master while the master stay intact</li>
+                <li>git merge: to merge branch with the master and commit changes to the master <br> ==> git merge brancg-name </li>
+                <li>Delet git branch: git branch -d branch_name, if they were never merged to the master we have to use -D</li>
+                <li>commit after conflict: got commit -m 'resolve merge conflict' </li>
+              </ol>
+            </li>
+            <li> <b><u><em>git collaboration:</em></u></b>
+                  <ol>
+                        <li>git clone: git clone remote_location clone_name, remote_location tells Git where to go to find the remote. This could be a web address, or a filepath,  the remote original is called origin</li>
+                        <li>git remote -v : to get a list of a Git project's remotes,navigate as CMD folder with cd.. </li>
+                        <li>git fetch: An easy way to see if changes have been made to the remote and bring the changes down to your local copy, This command will not merge changes from the remote into your local repository. It brings those changes onto what's called a remote branch synatx : enter the clone folder then git fetch</li>
+                        <li>git merge: git merge origin/master </li>
+                        <li>Git workflow:
+                              <ol>
+                                <li>Fetch and merge changes from the remote</li>
+                                  <li>Develop the feature on your branch and commit your work</li>
+                                  <li> Fetch and merge from the remote again (in case new commits were made while you were working)</li>
+                                  <li>Push your branch up to the remote for review</li>
+                              </ol>
+
+                        </li>
+                        <li>git push: git push origin your_branch_name</li>
+                        <li>to navigate CMD , cd / pwd: to know where your are</li>
+
+                  </ol>
+
+            </li>
+            
+
+            </ol>
+        </div>
+
+
+    </div>
+<script src="Git.js"></script>  
+</body>
+</html>
