@@ -5,11 +5,11 @@
 	<link rel="stylesheet" type="text/css" href="css/css.css">
 </head>
 <body>
-				<div class="Intro all">
+				<div class="intro">
 				<h1>Css. Cascading Style Sheets</h1><span><h2>Skin for <a href="html notes.html">Html</a></h2></span>
 				</div>
 
-				<div class="list all">
+				<div class="list-all">
 				<ol>
 								<li class="Mainlist"><H2>General info</H2>
 									<ol>
@@ -170,8 +170,30 @@
 
 													</ul>
 
-											</li>
+											
 										</ul>
+									</li>
+
+									<li><h1> <a href="https://css-tricks.com/almanac/properties/c/counter-increment/">Counters in Css</a> </h1>
+											<ol>
+													<li> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters?redirectlocale=en-US&redirectslug=CSS_Counters">counter-reset: my-counter</a>	 can add the ability to count any elements in the </li>
+													<li>counter-increment:my-counter. we add it to the class of list to be counted</li>
+													<li>item::before {content(my-counter)} </section></li>
+
+											</ol>
+
+
+
+
+
+
+
+
+
+
+
+									</li>
+
 								<li><h2><strong>CSS Grid</strong></h2>
 											<ol>
 												  <li><strong>Creating a Grid:</strong>Needs grid container and grid items,Parent selector {display: grid;} for Block Elements, or {display: inline-grid;}, There are two axes in a grid layout — the column (or block) axis and the row (or inline) axis.
@@ -256,6 +278,29 @@
 																					</ol>
 																</li>
 													</ol>
+										</li>
+										<li><h2>Media Query</h2>
+											<ol>
+												<li><img src="./Images/css2.jpg" alt="" class="Img-floatR">
+														<ol> <b>Syntax:</b>
+																<li>@media:This keyword begins a media query rule and instructs the CSS compiler on how to parse the rest of the rule. </li>
+																<li>only screen: Indicates what types of devices should use this rule. </li>
+																<li>media Feature: and (max-width : 480px):Media features are the conditions that must be met in order to render the CSS within a media query.</li>
+																<li>rules are nested inside of the media query's curly braces. these rules will be applied only when the media query is met</li>
+																<li>Range:Specific screen sizes can be targeted by setting multiple width and height media features. min-width and min-height
+																	<br>@media only screen and (min-width: 320px) and (max-width: 480px) {/* ruleset for 320px - 480px */} media rules only appled between 320px and 480px
+																</li>
+																<li>can also be targeted by resolution: @media only screen and (min-resolution: 300dpi)</li>
+																<li>And Operator: can be used to require multiple media features eg. screen size and resolution</li>
+																<li>Comma Separated List:If only one of multiple media features in a media query must be met, media features can be separated in a comma separated list. eg. @media only screen and (min-width: 480px), (orientation: landscape) so indicates or	</li>
+																<li>Breakpoints:are the screen sizes at which your web page does not appear properly. that when we need media query.</li>
+																<img src="./images/screen-sizes.png" alt="" width="620px" id="screen"> 
+														</ol>												
+												</li>
+												
+											</ol>
+
+
 										</li>
 
 									</div>
