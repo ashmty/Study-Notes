@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="css/Javascript.css">
   </head>
   <body>
+            <div class="banner">
+                        <img src="./images/jslogo.jpg" alt="" width="auto" height="200px">  
+            </div>
     <div class="header">
           <h1>JavaScrpit</h1>
           <p>JavaScript is a widely used web-based programming language that powers the dynamic behavior on most websites, including this one., no need for compiler,</p>
@@ -114,7 +117,9 @@
                <img src="./images/java1.jpg" alt="" class="java1" width="400" height="auto">
                 <li><b>Let:</b>the Value can be changed</li>
                 <li><b>Undefined:</b>JavaScript creates space for this variable in memory and sets it to undefine</li>
-                <li><b>Mathematical Assignment Operators:</b> make it easy to calculate a new value and assign it to the same variable without writing the variable twice.<img src=".\images\java2.jpg" alt="" class="java2"> </li>
+                <li><b>Mathematical Assignment Operators:</b> make it easy to calculate a new value and assign it to the same variable without writing the variable twice.
+                  <!-- <img src=".\images\java2.jpg" alt="" class="java2">  -->
+            </li>
                 <li><b>String Interpolation</b>: insert the content saved to a variable into a string.The + operator, known until now as the addition operator, is used to interpolate (insert) a string variable into a string</li>
                 <li><b>String Interpolation II</b>: after Java Es6 Instead of using quotes around the string, use backticks ``.Wrap your variable with ${myVariable}, followed by a sentence. No +s necessary. <img src="./images/java3.jpg" alt="" class="java3" width="auto" height="200px">
 
@@ -229,6 +234,10 @@
 
                   </li>
                   <li>property Method: when a function is placed inside an object it's called an method</li>
+                  <li>Functions as Data: JavaScript functions behave like any other data type in the language we can rename a function by declaring a varialble:<br><img src="./images/java19.jpg" alt="" ><br></li>
+                  <li> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" target="_blank">Function property object</a> :Since functions are a type of object, they have properties such as .length and .name and methods such as .toString()</li>
+                  <li><i><b>Callback functions</b></i>:we can also pass functions (into other functions) as parameters. A higher-order function is a function that either accepts functions as parameters, returns a function, or both!</li>
+                  <li><b><i>Functions as Parameters</i></b>: A higher-order function is a function that either accepts functions as parameters, returns a function, or both!</li>
 
               </ol>
               <br><br><br><br><hr width="50%">
@@ -306,14 +315,16 @@
           <div class="Iterators">
 
               <h2><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Iterators:</a></h2>
-                <ol> <li>Iterate : loop over an array with a function </li>
+                <ol> <li>Iterate : loop over an array with a function <img src="./images/jsiteratoranatomy.bmp" alt=""></li>
+
                     <li>.forEach(): don't change content of array  syntax:
-                      <br><img src="./images/java16.jpg" alt="" >
+                      <img src="./images/java16.jpg" alt="" >
                       <img src="./images/java16b.jpg" alt="" >
                       for the syntax use variable.forEach(parameter => return )
                       <br>can return Undefined
+                      <br>.forEach() loops through the array and executes the callback function for each element. During each execution, the current element is passed as an argument to the callback function.
                     </li>
-                    <li>.map():can change the contents of the array syntax:
+                    <li>.map():can change the contents of the array syntax, it takes an argument of a callback function and returns a new array!:
                       <br><img src="./images/java17a.jpg" alt="" >
                       <img src="./images/java17b.jpg" alt="" >
                     </li>

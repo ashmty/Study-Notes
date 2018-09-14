@@ -1,0 +1,99 @@
+* {
+	margin: 0 auto;
+	max-width: 960px ;
+}
+
+.all {
+	min-width: 400px;
+}
+
+li {
+	margin: auto;
+}
+
+.fonts #uppercase {
+	text-transform: uppercase	;
+	background-image: url();
+
+
+}
+.fonts #lowercase {
+	text-transform: lowercase;
+}
+
+.fonts #capitalize {
+	text-transform: capitalize;
+}
+
+
+/*Images*/
+
+.boxmodel {
+	float: right;
+	max-height: 250px;
+	max-width: 250px;
+	margin-right: 8%;
+
+}
+
+#gr {
+	float: right;
+
+
+}
+
+#gaa {
+	float: right;
+	max-width: 298px ;
+	max-Height: 398px ;
+}
+
+
+
+	/*position: relative;
+	right: 200px;*/
+
+
+
+.selector {
+	float: right;
+	max-height: 350px;
+	max-width: 350px;
+	margin-right: 8%;
+
+}
+
+/* 
+.Mainlist {
+	/* display: grid;
+	grid-template-columns: 1fr 1fr; */
+} */
+
+
+#font {
+	float: right;
+	max-width: 300px;
+	max-height: 300px;
+	margin-right: 8%;
+
+
+}
+
+#color {
+	float: right;
+	width: 300px;
+	position: relative;
+	bottom: 100px;
+	max-width:150px;
+	max-height:150px;
+
+}
+
+#fr {
+	float: right;
+	position: relative;
+	max-width: 300px;
+	max-height: 300px;
+	margin-right: 8%;
+
+}

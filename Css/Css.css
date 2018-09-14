@@ -1,49 +1,52 @@
-* {
+body  {
 	margin: 0 auto;
-	max-width: 960px ;
+	max-width: 1024px ;
+	background-image: url("../Images/terrazzo.png");
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:1.1em;	
+	min-width: 960px;
 }
 
-.all {
-	min-width: 400px;
+
+
+.intro h1, .intro h2 {
+	text-align: center;
 }
 
 
-
-
-
-li {
+/* li {
 	margin: auto;
-}
+} */
+
 
 .fonts #uppercase {
 	text-transform: uppercase	;
 	background-image: url();
-
-
 }
 .fonts #lowercase {
 	text-transform: lowercase;
 }
-
 .fonts #capitalize {
 	text-transform: capitalize;
 }
-
-
 /*Images*/
+
+#css-banner{
+	max-height: 100px;
+	position: relative;
+	top: 120px;
+	float:right;
+}
 
 .boxmodel {
 	float: right;
 	max-height: 250px;
 	max-width: 250px;
 	margin-right: 8%;
-
 }
 
 #gr {
 	float: right;
-
-
 }
 
 #gaa {
@@ -52,28 +55,39 @@ li {
 	max-Height: 398px ;
 }
 
-
-
-	/*position: relative;
-	right: 200px;*/
-
-
-
 .selector {
 	float: right;
 	max-height: 350px;
 	max-width: 350px;
 	margin-right: 8%;
-
 }
 
-/* 
-.Mainlist {
-	/* display: grid;
-	grid-template-columns: 1fr 1fr; 
-} 
+.flex-img{
+	display: inline-flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
 
-*/
+
+.flexj {
+	
+	/* width:200px; */
+}
+/* counter: */ 
+
+.list-all{
+	counter-reset: my-counter;
+}
+.Mainlist {
+	counter-increment: my-counter;	
+}
+.Mainlist h1 {
+	display: inline;
+}
+.Mainlist::before {
+ content:counter(my-counter)".  ";
+ font-size: 2rem;
+} 
 
 
 #font {
@@ -81,8 +95,6 @@ li {
 	max-width: 300px;
 	max-height: 300px;
 	margin-right: 8%;
-
-
 }
 
 #color {
@@ -92,7 +104,6 @@ li {
 	bottom: 100px;
 	max-width: 150px;
 	max-height: 150px;
-
 }
 
 #fr {
@@ -101,5 +112,14 @@ li {
 	max-width: 300px;
 	max-height: 300px;
 	margin-right: 8%;
-
 }
+
+.Img-floatR {
+	float: right;
+	display: block;
+} 
+
+#screen {
+	position: relative; 
+	left: 10%;
+} 

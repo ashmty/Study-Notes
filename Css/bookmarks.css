@@ -1,0 +1,7 @@
+body {
+  box-sizing: border-box;
+  background-image: url("../Images/terrazzo.png");
+  max-width: 960px;
+  margin: 0 auto ;
+}
+
