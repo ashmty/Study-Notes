@@ -32,10 +32,19 @@ div {
       border-right: 1px black solid;     
 }
 
-
-.java2 {
-  
+.shortcuts li{
+	
+	margin: 2%;
+	
+	
 }
+
+
+.shortcuts ul{
+	display: flex;
+	justify-content: center;
+}
+
 
   @media screen and (max-width: 600) {
 
