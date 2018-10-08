@@ -256,6 +256,7 @@
                 <ol>
                       <li><b>Global Scope:</b> Variables defined in the global scope are declared outside of a set of curly braces {}, they are defined throughout the whole program , while Specific to the function if in between {}</li>
                       <li><b>Block Scope:</b>A block refers to the {} braces of a function, a loop, or an if statement, and serves as an important structural marker for our code. Block scope means that a variable defined in the block is only accessible within the curly braces.</li>
+                      <li>the block scope only works with let and const but not with var</li>
                 </ol>
                 <br><br><br><br><hr width="50%">
 
@@ -334,24 +335,21 @@
                       <br>can return Undefined
                       <br>.forEach() loops through the array and executes the callback function for each element. During each execution, the current element is passed as an argument to the callback function.
                     </li>
-                    <li>.map():can change the contents of the array syntax, it takes an argument of a callback function and returns a new array!:
+                    <li>.map():can change the contents of the array syntax, it takes an argument of a callback function and returns a new array!, same amount of items in the array:
                       <br><img src="./images/java17a.jpg" alt="" >
                       <img src="./images/java17b.jpg" alt="" >
                     </li>
                     <li>.filter(): returns a new array, but returns certain elements from the original array that evaluate to truthy based on conditions written in the block of the method.
                       <br><img src="./images/java18a.jpg" alt="" >
                       <img src="./images/java18b.jpg" alt="" >
+                      we can use the method .include('string') to find a word in the array;
+                      
                     </li>
                     <li>.findIndex() Method: to find the location of an element in an array. and return an idex location. </li>
                     <li> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce">.reduce() Method</a>:  returns a single value after iterating through the elements of an array, so reduce the array to 1 number ( sumation of the value) ,  thereby reducing the array,const reducer = (accumulator, currentValue) => accumulator + currentValue;<img src="./images/java19c.jpg" alt="">
                         you can add a second argument to add to .reduce number.reduce ((accumulator, currentValue) =>{ accumulator + currentValue;} ,10 'second argument')
-
-
-
-
-
-
                     </li>
+                    <li>.sort() : the filter iterator can help to arrange numbers from smaller to bigger syntax array.sort(function(a, b){return a-b})</li>
                 </ol>
                 <br><br><br><br><hr width="50%">
 
@@ -592,21 +590,47 @@
                               console.log('Hello World');<br>
                         } <br>
                         where e in the function will be the event , and we can get the target of the action <br>
-                        we can get any event when we click e.target; e.className ; e.classList ; e.target.classList ; e.type ; e.TimeStamp ; e.clintY ; e.clintX ; e.offsetY ; e.offsetX  <br>
-                      </li>
-                      <li><h2>Mouse Events:</h2>
-                              <ul>
-                                          <li>'click'</li>
-                                          <li>Double click: 'dblclick'</li>
-                                          <li>Mouse Down: 'mousedown' click and hold mouse</li>
-                                          <li>Mouse Up: 'mouseup' click and release mouse</li>
-                                          <li>'mouseenter'</li>
-                                          <li>'mouseleave'</li>
-                                          <li>'mouseover': on an element inside the element </li>
-                                          <li>'mouseout' : leave element inside the elemen</li>
-                                          <li>'mousemove': record any mouse movement on the element, can be  used for games. :-)  </li>
-                                          
-                              </ul>
+                        we can get any event when we click e.target; e.className ; e.classList ; e.target; e.classList ; e.type ; e.TimeStamp ; e.clintY ; e.clintX ; e.offsetY ; e.offsetX  <br>
+                              <ol>
+                                 <li>
+                                    <ul>
+                                       <li>We can use window or document properties to catch the action from the web page</li>
+                                       <li>we can't use an addEvenListener for a node list ( that comes from querySelectorAll ) to that we use forEach, in that case the syntax will be document.Qs('class').forEach(each=>each.addEvenListener('function')) </li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <h2>Mouse Events:</h2>
+                                          <ul>
+                                                <li>'click'</li>
+                                                <li>Double click: 'dblclick'</li>
+                                                <li>Mouse Down: 'mousedown' click and hold mouse</li>
+                                                <li>Mouse Up: 'mouseup' click and release mouse</li>
+                                                <li>'mouseenter'</li>
+                                                <li>'mouseleave'</li>
+                                                <li>'mouseover': on an element inside the element </li>
+                                                <li>'mouseout' : leave element inside the elemen</li>
+                                                <li>'mousemove': record any mouse movement on the element, can be  used for games. :-)  </li>
+                                                
+                                            </ul>
+                                 </li>
+                                 <li>
+                                       <h2>Keyboard Events:</h2>
+                                       <ul>
+                                             <li>onkeyup</li>
+                                             <li>onkeydown</li>
+                                             <li></li>
+                                       </ul>
+                                 </li>
+                                 <li><h2><a href="https://www.w3schools.com/Js/js_timing.asp">JavaScript Timing Events</a></h2>
+                                    <ul>
+                                          <li>to get today date => new Date(), to get seconds new Date().getSeconds()</li>
+                                          <li>to set intervals : setInterval(function, milliseconds) where 1000 is 1 sec,</li>
+                                    </ul>
+                              
+                              </li>
+
+                                 
+                              </ol>
 
                   
                   
