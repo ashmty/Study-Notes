@@ -320,7 +320,7 @@
 													<li>To designate an element as a flex container, {display: flex or inline-flex} then there are several properties we can use to specify how its children behave:
 															<ol>
 																	<li><u><b><i>inline-flex:</i></b></u> allows us to create flex containers that are also inline elements.</li>
-																	<li><u><b><i>justify-content:</i></b></u>all of the child elements (flex items) move toward the upper left corner of the parent container,justify-content specify how flex items spread out from left to right, along the main axis. <i>syntax:</i>(.container {	display: flex;	justify-content: flex-end;	}
+																	<li><u><b><i>justify-content:</i></b></u> space along the main axis ( by default row ) all of the child elements (flex items) move toward the upper left corner of the parent container,justify-content specify how flex items spread out from left to right, along the main axis. <i>syntax:</i>(.container {	display: flex;	justify-content: flex-end;	}
 																				<ol>
 																					<li><b><i> flex-start</i></b>: all items will be positioned in order starting, from the left of the parent container, with no extra space between or before them.</li>
 																					<li><b><i>flex-end</i></b>:all items will be positioned in order, with the last item starting on the right side of the parent container, with no extra space between or after them.</li>
@@ -329,17 +329,21 @@
 																					<li><b><i>space-between</i></b>:items will be positioned with equal space between them, but no extra space before the first or after the last elements.</li>
 																				</ol>
 																	</li>
-																	<li><u><b><i>align-items<b></b></i></b></u>:to space flex items vertically.
+																	<li><u><b><i>align-items<b></b></i></b></u>:to space flex items vertically.( along the cross access top to buttom)
 																				<ol>
 																					<li><b><i>flex-start</i></b> : all elements will be positioned at the top of the parent container.	</li>
 																					<li><b><i>flex-end</i></b> : all elements will be positioned at the bottom of the parent container.	</li>
 																					<li><b><i>center</i></b> : the center of all elements will be positioned halfway between the top and bottom of the parent container.</li>
-																					<li><b><i>baseline</i></b> : the bottom of the content of all items will be aligned with each other.</li>
+																					<li><b><i>baseline</i></b> : the bottom of the content (text) of all items will be aligned with each other.</li>
 																					<li><b><i>stretch</i></b> : if possible, the items will stretch from top to bottom of the container (this is the default value; elements with a specified height will not stretch; elements with a minimum height or no height specified will stretch)</li>
 																				</ol>
 
 																	</li>
-																	<li><u><i><b>flex-grow</b></i></u>:specify if items should grow to fill a container and also which items should grow proportionally more or less than others., This is a flex items property.{flex-grow: 1 or 2 } 2 stretch twice as much as 1 when the page get resized ( responsiveness) </li>
+																	<li><u><b><i>align-self<b></b></i></b></u>
+																		just applied to 1 child in the container , syntac flex-child { align-self:flex-start;	}
+																		
+																	</li>
+																	<li><u><i><b>flex-grow</b></i></u>:specify if items should grow to fill a container ( the empty space remaing )and also which items should grow proportionally more or less than others., This is a flex items property.{flex-grow: 1 or 2 } 2 stretch twice as much as 1 when the page get resized ( responsiveness) </li>
 																	<li><u><i><b>flex-shrink</b></i></u>:same if the page gets smaller takes a value of 1 or 2 as well, min-width and max-width can override., can accept the value of 0 , where the item will shrink faster,flex-basis</li>
 																	<li><u><i><b>flex-basis</b></i></u>: to specify the width of an item before it stretches or shrinks,</li>
 																	<li><u><i><b>flex</b></i></u>: as a property in the flex-item it will work as a shortcut {flex: grow shrink basis}, Note that there is no way to set only flex-shrink and flex-basis using 2 values; { flex: 1 ; will ditribute items equally in the container }</li>
@@ -361,6 +365,7 @@
 																						</li>
 																				</ol>
 																	</li>
+
 																	<li><u><b><i>flex-direction</i></b></u>:the default is row, flex containers have two axes: a major axis ( left to right )and a cross axis ( top to button ). The major axis covers: the following properties:	justify-content,flex-wrap, flex-grow, flex-shrink, The  cross axis: align-items,align-content, the flex dirctions are interchangeable , If we add the flex-direction property and give it a value of column, the flex items will be ordered vertically, not horizontally.	
 																				<ol> Syntax:L {flex-direction: ----}
 																					<li><i><b>row</b></i>:elements will be positioned from left to right across the parent element starting from the top left corner (default)</li>
@@ -376,7 +381,9 @@
 																	</li>
 																	<li>flex-Order
 																		<ol>
-																			<li>applied to the child, each item have a location of 0 ,so {order: 1 } will force the child to the end of the flex container.</li>
+																			<li>applied to the child, each item have a default order of 0 ,so {order: 1 } will force the child to the end of the flex container.</li>
+																			<li>syntax: { order: 1 } , always will be removed to 5;</li>
+																			<li>can take the value of -1, begining of the container</li>
 																		</ol>
 																	</li>
 
