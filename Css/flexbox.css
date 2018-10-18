@@ -1,0 +1,59 @@
+
+body {
+  margin: 0 auto;
+  max-width: 960px; 
+  
+}
+
+/*boxes colors*/
+.box1 {
+  background-color: red;
+  border: 1px dotted black ;
+  font-size: 1.5rem;
+}
+.box2 {
+  background-color: yellow;
+  border: 1px dotted black ;
+  font-size: 1.5rem;
+}.box3 {
+  background-color: green;
+  border: 1px dotted black ;
+  font-size: 1.5rem;
+}.box4 {
+  background-color: orange;
+  border: 1px dotted black ;
+  font-size: 1.5rem;
+}.box5 {
+  background-color: gray;
+  border: 1px dotted black ;
+  font-size: 1.5rem;
+}
+
+.noflex  {
+border: 1px solid red;
+
+}
+
+.applied-flex {
+display: flex;
+border: 1px solid red;
+}
+
+.inline-flex {
+  display: inline-flex;
+  border: 1px solid red;
+  /* justify-content: flex-start; */
+}
+
+.flexjc {
+  display: flex;
+  border: 1px solid red;
+  justify-content: center;
+}
+
+.applied-directionc {
+  display: flex;
+  border: 1px solid red;
+  flex-direction: row;
+  justify-content: space-around;
+}
