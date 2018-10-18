@@ -9,10 +9,19 @@
             <div class="banner">
                         <img src="./images/jslogo.jpg" alt="" width="auto" height="200px">  
             </div>
-    <div class="header">
-          <h1>JavaScrpit</h1>
-          <p>JavaScript is a widely used web-based programming language that powers the dynamic behavior on most websites, including this one., no need for compiler,</p>
-    </div>
+   
+       <div class="shortcuts">
+      <ul>
+                  <li><a href="index.html">Index</a></li>
+                  <li><a href="html notes.html">Html</a></li>
+                  <li><a href="Javascript.html">JavaScript</a></li>
+      </ul>
+      </div>
+      
+      <div class="header">
+            <h1>JavaScrpit</h1>
+            <p>JavaScript is a widely used web-based programming language that powers the dynamic behavior on most websites, including this one., no need for compiler,</p>
+      </div>
 
     <div class="container">
         <div class="intro">
@@ -247,6 +256,7 @@
                 <ol>
                       <li><b>Global Scope:</b> Variables defined in the global scope are declared outside of a set of curly braces {}, they are defined throughout the whole program , while Specific to the function if in between {}</li>
                       <li><b>Block Scope:</b>A block refers to the {} braces of a function, a loop, or an if statement, and serves as an important structural marker for our code. Block scope means that a variable defined in the block is only accessible within the curly braces.</li>
+                      <li>the block scope only works with let and const but not with var</li>
                 </ol>
                 <br><br><br><br><hr width="50%">
 
@@ -306,6 +316,7 @@
                            </li>
                            <li><b>ForIn loop:</b>used to loop through objects : <i>syntax:</i> user = { firstName: 'ash' , lastName: 'Yacoub' , age: 39}; for(let x in user){ console.log(`${x} : ${user[x]}`);}  </li>
                            <li>Infinite Loops: An infinite loop means there was an error in the logic of the loop because the stopping condition is never reached</li>
+                           <li>For </li>
 
 
                     </ol>
@@ -324,15 +335,21 @@
                       <br>can return Undefined
                       <br>.forEach() loops through the array and executes the callback function for each element. During each execution, the current element is passed as an argument to the callback function.
                     </li>
-                    <li>.map():can change the contents of the array syntax, it takes an argument of a callback function and returns a new array!:
+                    <li>.map():can change the contents of the array syntax, it takes an argument of a callback function and returns a new array!, same amount of items in the array:
                       <br><img src="./images/java17a.jpg" alt="" >
                       <img src="./images/java17b.jpg" alt="" >
                     </li>
                     <li>.filter(): returns a new array, but returns certain elements from the original array that evaluate to truthy based on conditions written in the block of the method.
                       <br><img src="./images/java18a.jpg" alt="" >
                       <img src="./images/java18b.jpg" alt="" >
+                      we can use the method .include('string') to find a word in the array;
+                      
                     </li>
-                    <li>Choose the Right Iterator</li>
+                    <li>.findIndex() Method: to find the location of an element in an array. and return an idex location. </li>
+                    <li> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce">.reduce() Method</a>:  returns a single value after iterating through the elements of an array, so reduce the array to 1 number ( sumation of the value) ,  thereby reducing the array,const reducer = (accumulator, currentValue) => accumulator + currentValue;<img src="./images/java19c.jpg" alt="">
+                        you can add a second argument to add to .reduce number.reduce ((accumulator, currentValue) =>{ accumulator + currentValue;} ,10 'second argument')
+                    </li>
+                    <li>.sort() : the filter iterator can help to arrange numbers from smaller to bigger syntax array.sort(function(a, b){return a-b})</li>
                 </ol>
                 <br><br><br><br><hr width="50%">
 
@@ -342,21 +359,43 @@
               <h2>Objects</h2>Objects are containers that can store data and functions. The data we store in an object is not ordered — we can only access it by calling its associated key.  Key: value , property: Value, ( the key/property: have the same rules as variables include naming.)
 
                   <ol>
-                        <li>syntax let var = {name:    , age: , array: []};</li>
-                        <li>To access the properties within an object, we connect the value's name to the key name with a period . console.log(var.name);  or using [].. console.log(var['name'])</li>
+                        <li>syntax let var = {name:    , age: , array: [ ]};</li>
+                        <li>To access the properties within an object, we connect the value's name to the key name with a period . console.log(var.name);  or using [ ].. console.log(var['name'])</li>
                         <li>we can place an object within an object and acess it with the same syntax var.array.something</li>
                         <li>Methods: used for functions as well.</li>
                         <li><b>Adding a Property:</b>objects are mutable, which means you can change them after they're created.; restaurant['appetizers'] = ['Fried Calamari', 'Bruschetta'];
                         restaurant.desserts = ['Homemade Tiramisu', 'Cannoli'];</li>
                         <li><b>Editing a Property:</b> just add it after same way as adding a propery</li>
                         <li>Methods ES6 with functions : does not need : => just the ()</li>
-                        <li>.this Keyword :create methods that operate on the data inside of the same object. In Javascript, this refers to the object we call it inside.</li>
-                        <li>Getters and Setters :get and set the properties inside of an object. to check if the data is valid.
+                        <li><b>.this Keyword :</b>create methods that operate on the data inside of the same object. In Javascript, this refers to the object we call it inside.
+                              <ol>
+                                    <li><i>Arrow Functions and this:</i>we don't use .this with arrow function, but a full function exspression as .this will inhirit from the global not from the object</li>
+                              </ol>
+                        
+                        </li>
+                        <li> privacy: to protect the data from being manipulated inside an object we put _ before the key const bankAccount = {_amount: 1000  }, it's an indecation that the value should not be manipulated , and then could be manipulate using the setters and getters.
+
+                        </li>
+
+                        <li>Getters and Setters :Getters can return the value of internal properties and setters can safely reassign property values. get and set the properties inside of an object. to check if the data is valid.
                           prepended the property names with underscores (_). Developers use an underscore before a property name to indicate a property or value should not be modified directly by other code. We recommend prepending all properties with an underscore, and creating setters for all attributes you want to access later in your code.
                           <br><img src="./images/java 19.jpg" alt="" >
                                 <ul>
-                                      <li>setters: set property</li>
-                                      <li>Getters are used to get the property values inside of an object.</li>
+                                      <li>setters: reassign values of existing properties within an object.
+                                            <ul>
+                                                  <li>Setters function need a value for the function().</li>
+                                                  <li>setters and getters dont need a value in the () when called. </li>
+                                            </ul>
+                                      </li>
+                                      <li>Getters are used to get the property values inside of an object, We use the get keyword followed by a function.
+                                            <ul>
+                                                   <li>Getters can perform an action on the data when getting a property. </li>
+                                                   <li>Getters can return different values using conditionals.</li>
+                                                   <li>In a getter, we can access the properties of the calling object using this.</li>
+                                                   <li> The functionality of our code is easier for other developers to understand.</li>
+                                                  
+                                            </ul>
+                                      </li>
                                 </ul>
 
 
@@ -372,7 +411,30 @@
                                     <li>Communicate with social media servers all in json object litral format eg. </li>
                                     <li>ajax </li>
                               </ul>
+                        </li>
+                        <li> <b> factory functions:</b> is a function that returns an object and can be reused to make multiple object instances,can also have parameters allowing us to customize the object that gets returned.
+                              <ul>
+                                          <li>Can take parameters from the function to fill the key proprties</li>
+                                          <li>can take methods, like functions with or without parameters. </li>
+                                          <li>Syntax: const robotFactory =(model ,mobile)=> {   model : model , mobile: mobile , beep(){   console.log('Beep Boop');
+                                                  }
+                                                }
+                                              };</li>
+                                              <li>Property Value Shorthand:in IE6 called destructuring, to make sort cut we only use the property and remove the key <img src=".images/java20.jpg" alt=""></li>
+                                              <li>Destructured Assignment: for an object = {key: property }, we can create a variable const = object.key , or using the Destructured method : const { key } = object ; we can use the shortcut then to call on ony key inside;
 
+
+                                              </li>
+                                              <li> <b> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#Methods">Built-in Object Methods:</a> </b>
+                                          
+                                          
+                                          
+                                                </li>
+                              </ul>
+                        </li>
+                       
+                        <li> add an array to an object within the object: for the object {_courses : ... } this._courses[courseName].push(dish), where courseName: dish is what we want to add.
+                  
                         </li>
                   </ol>
                   <br><br><br><br><hr width="50%">
@@ -528,21 +590,47 @@
                               console.log('Hello World');<br>
                         } <br>
                         where e in the function will be the event , and we can get the target of the action <br>
-                        we can get any event when we click e.target; e.className ; e.classList ; e.target.classList ; e.type ; e.TimeStamp ; e.clintY ; e.clintX ; e.offsetY ; e.offsetX  <br>
-                      </li>
-                      <li><h2>Mouse Events:</h2>
-                              <ul>
-                                          <li>'click'</li>
-                                          <li>Double click: 'dblclick'</li>
-                                          <li>Mouse Down: 'mousedown' click and hold mouse</li>
-                                          <li>Mouse Up: 'mouseup' click and release mouse</li>
-                                          <li>'mouseenter'</li>
-                                          <li>'mouseleave'</li>
-                                          <li>'mouseover': on an element inside the element </li>
-                                          <li>'mouseout' : leave element inside the elemen</li>
-                                          <li>'mousemove': record any mouse movement on the element, can be  used for games. :-)  </li>
-                                          
-                              </ul>
+                        we can get any event when we click e.target; e.className ; e.classList ; e.target; e.classList ; e.type ; e.TimeStamp ; e.clintY ; e.clintX ; e.offsetY ; e.offsetX  <br>
+                              <ol>
+                                 <li>
+                                    <ul>
+                                       <li>We can use window or document properties to catch the action from the web page</li>
+                                       <li>we can't use an addEvenListener for a node list ( that comes from querySelectorAll ) to that we use forEach, in that case the syntax will be document.Qs('class').forEach(each=>each.addEvenListener('function')) </li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <h2>Mouse Events:</h2>
+                                          <ul>
+                                                <li>'click'</li>
+                                                <li>Double click: 'dblclick'</li>
+                                                <li>Mouse Down: 'mousedown' click and hold mouse</li>
+                                                <li>Mouse Up: 'mouseup' click and release mouse</li>
+                                                <li>'mouseenter'</li>
+                                                <li>'mouseleave'</li>
+                                                <li>'mouseover': on an element inside the element </li>
+                                                <li>'mouseout' : leave element inside the elemen</li>
+                                                <li>'mousemove': record any mouse movement on the element, can be  used for games. :-)  </li>
+                                                
+                                            </ul>
+                                 </li>
+                                 <li>
+                                       <h2>Keyboard Events:</h2>
+                                       <ul>
+                                             <li>onkeyup</li>
+                                             <li>onkeydown</li>
+                                             <li></li>
+                                       </ul>
+                                 </li>
+                                 <li><h2><a href="https://www.w3schools.com/Js/js_timing.asp">JavaScript Timing Events</a></h2>
+                                    <ul>
+                                          <li>to get today date => new Date(), to get seconds new Date().getSeconds()</li>
+                                          <li>to set intervals : setInterval(function, milliseconds) where 1000 is 1 sec,</li>
+                                    </ul>
+                              
+                              </li>
+
+                                 
+                              </ol>
 
                   
                   
