@@ -9,6 +9,11 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
+        <style>
+                span {
+                 color:red;
+                       }
+      </style>
 
     <title>Bootstrap Sandbox</title>
 </head>
@@ -98,7 +103,9 @@
         <button class="btn btn-danger" type="button">Danger</button>
         <button class="btn btn-light" type="button">Light</button>
         <button class="btn btn-dark" type="button">Dark</button>
-        <button class="btn btn-link" type="button">Link</button>
+        <button class="btn btn-link" type="button">Link</button> <span> class="btn btn-link", just to show as a link</span><hr>
+
+        <span> class="btn btn-primary"</span><hr>
 
         <br>
         <br>
@@ -109,6 +116,7 @@
         <input class="btn btn-light" type="button" value="Input">
         <input class="btn btn-warning" type="submit" value="Submit">
         <input class="btn btn-info" type="reset" value="Reset">
+        <span> class="btn btn-primary"</span><hr>
 
         <br>
         <br>
@@ -122,43 +130,56 @@
         <button class="btn btn-outline-danger" type="button">Danger Outline</button>
         <button class="btn btn-outline-light" type="button">Light Outline</button>
         <button class="btn btn-outline-dark" type="button">Dark Outline</button>
+        <span> class="btn btn-outline-primary"</span><hr>
+        <br>
+        <br>
 
-        <br>
-        <br>
 
         <!-- BUTTON SIZES -->
         <button class="btn btn-primary btn-lg" type="button">
             <i class="fas fa-user"></i> Large button</button>
+
         <button class="btn btn-success btn-sm" type="button">Small button</button>
+        <span> class=" btn btn-primary btn-lg" type="button"</span>
+        <span> class="btn btn-success btn-sm" type="button"</span>
         <br>
         <br>
         <button class="btn btn-dark btn-block" type="button">Block level button</button>
+        <span> class="btn btn-dark btn-block" type="button"</span>     
+
 
         <br>
         <br>
 
         <!-- STATES -->
-        <button class="btn btn-primary" type="button">Regular Button</button>
-        <button class="btn btn-primary active" type="button">Active Button</button>
-        <button class="btn btn-primary disabled" type="button">Disabled Button</button>
+        <button class="btn btn-primary" type="button">Regular Button</button><span>< buttonclass ="btn btn-primary" type="button" > </span>
+        <button class="btn btn-primary active" type="button">Active Button</button><span>< buttonclass ="btn btn-primary activr" type="button" > </span>
+        <button class="btn btn-primary disabled" type="button">Disabled Button</button><span>< buttonclass ="btn btn-primary disabled" type="button" > </span>
 
         <button class="btn btn-primary" type="button" data-toggle="button">
             Toggle State
         </button>
+        <span>< class="btn btn-primary" type="button" data-toggle="button" > </span>
 
         <br>
         <br>
 
         <!-- BUTTON GROUPS -->
+        <span> div class="btn-group" </span><hr>
+            
         <div class="btn-group">
             <button class="btn btn-primary" type="button">Left</button>
             <button class="btn btn-secondary" type="button">Middle</button>
             <button class="btn btn-primary" type="button">Right</button>
+            <span> for each one: class="btn btn-primary" </span><hr>
         </div>
 
-        <br></br>
+        <br><br>
 
         <!-- BUTTON TOOLBAR -->
+        <span>div class="btn-toolbar"</span>
+        <span>div class="btn-group</span>
+        <span>button class="btn btn-primary" type="button" ( for each)</span>
         <div class="btn-toolbar">
             <div class="btn-group mr-2">
                 <button class="btn btn-primary" type="button">1</button>
@@ -180,16 +201,23 @@
         <br>
 
         <!-- VERTICAL GROUP -->
+        <span>div class="btn-group-vertical"</span> <br>
+        <span>button class="btn btn-primary" type="button" ( for each)</span>
+
         <div class="btn-group-vertical">
             <button class="btn btn-primary" type="button">Top</button>
             <button class="btn btn-primary" type="button">Middle</button>
             <button class="btn btn-primary" type="button">Bottom</button>
         </div>
 
+
         <br>
         <br>
 
         <!-- BUTTON DROPDOWNS -->
+        <span>div class="dropdown"/</span> <br> <span> < button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            My Dropdown
+        < /button>/</span> <br> <span>class="dropdown-menu"</span> <br> <span>class="dropdown-item"</span>
         <div class="dropdown">
             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
                 My Dropdown
@@ -217,6 +245,11 @@
                 <a class="dropdown-item" href="#">Link Three</a>
             </div>
         </div>
+        <span>div class="btn-group"</span> <br>
+        <span>button class="btn btn-primary" type="button</span><br>
+        <span>button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown"</span><br>
+        <span>div class="dropdown-menu"</span><br>
+        <span>a class="dropdown-item" href="#"</span><br>
 
     </div>
     <!-- ./container -->

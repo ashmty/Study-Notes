@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
 
+        <style>
+                span {
+                 color:red;
+                       }
+      </style>
     <title>Bootstrap Sandbox</title>
 </head>
 
@@ -87,7 +92,11 @@
     <!--##################START HERE###################-->
 
     <!-- SIMPLE NAVBAR -->
+    <span>container will make in the middle with fixed width depending on the screen size</span> <br>
+    
+
     <nav class="navbar navbar-expand-sm navbar-light bg-light mb-3">
+        
         <div class="container">
             <a class="navbar-brand" href="#">Navbar</a>
             <ul class="navbar-nav">
@@ -106,6 +115,14 @@
             </ul>
         </div>
     </nav>
+    <span>nav class="navbar navbar-expand-sm navbar-light bg-light mb-3" SIMPLE NAVBAR</span><br>
+    <span>class= "container"</span><br>
+    <span>a class="navbar-brand" (navbar)</span><br>
+    <span>ul class="navbar-nav"</span><br>
+    <span>li class="nav-item"/(then for each link)</span><span> a class="nav-link"</span>
+
+
+     <hr>
 
     <!-- NAVBAR WITH RESPONSIVE TOGGLE -->
     <nav class="navbar navbar-expand-sm navbar-light bg-light mb-3">
@@ -132,6 +149,17 @@
             </div>
         </div>
     </nav>
+    <span>nav class=""navbar navbar-expand-sm navbar-light bg-light mb-3" NAVBAR WITH RESPONSIVE TOGGLE</span><br>
+    <span>(sp. to change the size of the screen it respond to we change the sm/md/lg in the navbar-expand-sm)</span>
+    <span>class= "container"</span><br>
+    <span>a class="navbar-brand" (navbar)</span><br>
+    <span> < button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><br>
+            < span class="navbar-toggler-icon">< /span>
+        < /button>
+    </span><br>
+    <span>div class="collapse navbar-collapse" id="navbarNav"</span> <br>
+    <span>ul class="navbar-nav ml-auto"</span><br>
+    <span>li class="nav-item"/(then for each link)</span><span> a class="nav-link"</span> <hr>
 
     <!-- NAVBAR WITH FORM -->
     <nav class="navbar navbar-expand-sm navbar-light bg-light mb-3">
@@ -163,7 +191,20 @@
             </div>
         </div>
     </nav>
-
+    <span>nav class=""navbar navbar-expand-sm navbar-light bg-light mb-3" NAVBAR WITH FORM</span><br>
+    <span>class= "container"</span><br>
+    <span>a class="navbar-brand" (navbar)</span><br>
+    <span> < button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><br>
+            < span class="navbar-toggler-icon">< /span>
+        < /button>
+    </span><br>
+    <span>div class="collapse navbar-collapse" id="navbarNav"</span> <br>
+    <span>ul class="navbar-nav ml-auto"</span><br>
+    <span>li class="nav-item"/(then for each link)</span><span> a class="nav-link"</span> 
+    <span> < form class="form-inline ml-auto"> <br>
+        < input type="text" class="form-control mr-2" placeholder="Search" > <br>
+        < button class="btn btn-outline-success">Search< /button> <br>
+    /form> </span><hr>
 
     <!-- NAVBAR WITH DROPDOWN -->
     <nav class="navbar navbar-expand-sm navbar-light bg-light mb-3">
@@ -193,6 +234,15 @@
             </ul>
         </div>
     </nav>
+    <span>nav class=""navbar navbar-expand-sm navbar-light bg-light mb-3" NAVBAR WITH DROPDOWN</span><br>
+    <span>class= "container"</span><br>
+    <span>a class="navbar-brand" (navbar)</span><br>
+    <span>ul class="navbar-nav"</span><br>
+    <span>li class="nav-item"/(then for each link)</span><span> a class="nav-link"</span> 
+    <span>li class="nav-item dropdown" <br>
+        a href="#" class="dropdown-item"<br>
+         <br>
+    </span><hr>
 
     <!-- COLORS -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
@@ -214,6 +264,7 @@
             </ul>
         </div>
     </nav>
+    <span>nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3" color= primary</span><br>
 
     <nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-3">
         <div class="container">
@@ -233,7 +284,9 @@
                 </li>
             </ul>
         </div>
+       
     </nav>
+    <span>nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-3" color= primary</span><br>
 
     <nav class="navbar navbar-expand-sm navbar-dark bg-success mb-3">
         <div class="container">
@@ -254,21 +307,31 @@
             </ul>
         </div>
     </nav>
+    <span>nav class="navbar navbar-expand-sm navbar-dark bg-success mb-3" color= primary</span><br><hr>
 
     <br>
     <br>
-
+    
     <!-- FIXED TOP -->
     <!-- <nav class="navbar fixed-top navbar-dark bg-dark">
         <a href="#" class="navbar-brand">Navbar Fixed Top</a>
     </nav> -->
+    <span>FIXED TOP: < nav class="navbar fixed-top navbar-dark bg-dark"</span><br>
+    <span>a href="#" class="navbar-brand">Navbar Fixed Top </span><hr>
 
     <!-- FIXED BOTTOM -->
+    <span>FIXED BOTTOM: < nav class="navbar fixed-bottom navbar-dark bg-dark" </span><br>
+    <span>a href="#" class="navbar-brand">Navbar Fixed Bottom </span><hr>
+
     <nav class="navbar fixed-bottom navbar-dark bg-dark">
         <a href="#" class="navbar-brand">Navbar Fixed Bottom</a>
     </nav>
 
     <!-- STICKY TOP -->
+    <span>STICKY TOP: < nav class="navbar sticky-top navbar-dark bg-dark" </span><br>
+    <span>a href="#" class="navbar-brand">Navbar Sticky Top </span><hr>
+
+
     <nav class="navbar sticky-top navbar-dark bg-dark">
         <a href="#" class="navbar-brand">Navbar Sticky Top</a>
     </nav>
