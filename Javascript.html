@@ -28,7 +28,7 @@
           <h2>Java Introduction</h2>
               <ol>
                     <li><b>The console.log()</b> command is used to print, or log, text to the console. eg. console.log("Hello!"); ctrl + shift + j open chrome Java console.; clear() to clear the console </li>
-                    <li> to link .js to html file we use < script src=" " > < /script> or directly using the tags but we can't use both at the same time</li>
+                    <li> to link .js to html file we use  (script src=" "    /script) or directly using the tags but we can't use both at the same time</li>
                     <li><b>Primative Data Types:</b>Basic types of data , JS: is a dynamilcally typed language which means u can add different types of data to the variable unlike java and C which are static ( so an array in js can have stings and numbers).
                         <ul>
                           <li><b>Strings:</b>Any grouping of keyboard characters surrounded by single quotes ('Hello') or double quotes ("World!") in case of a special sign like ' or " we can use \ before to make it show console.log('she\'s is a great person')</li>
@@ -108,31 +108,31 @@
               </ol>
               <br><br><br><br><hr width="50%">
           </div>
+
           <div class="Variables">
-            <h2>Variables</h2>
-            <h4>Variables allow us to assign data to a word and use the word to reference the data., they could be ( letters/numbers/underscores/dollar signs )</h4>
-              <ol>
-                <li>Differen way if writting variables :
-                      <ul>
-                        <li>camel case: start with lower case and every word after is uppercase myFavMe</li>
-                        <li>Partial case: all words are in uppercase MyFavMe</li>
-                        <li>underscore: with under score in between my_fav_me</li>
-                        <li>Variables cant start with a number, can have $ or _ ,</li>
+                  <h2>Variables</h2>
+                  <h4>Variables allow us to assign data to a word and use the word to reference the data., they could be ( letters/numbers/underscores/dollar signs )</h4>
+                  <ol>
+                        <li>Differen way if writting variables :
+                              <ul>
+                                    <li>camel case: start with lower case and every word after is uppercase myFavMe</li>
+                                    <li>Partial case: all words are in uppercase MyFavMe</li>
+                                    <li>underscore: with under score in between my_fav_me</li>
+                                    <li>Variables cant start with a number, can have $ or _ ,</li>
 
-                      </ul>
+                              </ul>
+                        </li>
+                        <li><b>var:</b>could be updated and reassigned, <i>scope</i>  function scope if in a function (local) , or global if outside , anything other than a function will be global</li>
+                        <li><b>Let:</b>the Value can be changed similar to var but the differenc is let is a block scope ( not a function scope ) so if between { } will remain local to that {block}</li> 
+                        <li><b>const:</b> short for constant, is a JavaScript keyword that creates a new variable with a value that cannot change. and must have a value, its block scope as well.</li>
+                                          <img src="./images/java1.jpg" alt="" class="java1" width="400" height="auto">
+                        
+                        <li><b>Undefined:</b>JavaScript creates space for this variable in memory and sets it to undefine</li>
+                        <li><b>Mathematical Assignment Operators:</b> make it easy to calculate a new value and assign it to the same variable without writing the variable twice. </li>
+                        <li><b>String Interpolation</b>: insert the content saved to a variable into a string.The + operator, known until now as the addition operator, is used to interpolate (insert) a string variable into a string</li>
+                        <li><b>String Interpolation II</b>: after Java Es6 Instead of using quotes around the string, use backticks ``.Wrap your variable with ${myVariable}, followed by a sentence. No +s necessary. <br> <img src="./images/java3.jpg" alt="" class="java3" width="auto" height="200px">
 
-                </li>
-                <li><b>const,:</b> short for constant, is a JavaScript keyword that creates a new variable with a value that cannot change. and must have a value</li>
-               <img src="./images/java1.jpg" alt="" class="java1" width="400" height="auto">
-                <li><b>Let:</b>the Value can be changed</li>
-                <li><b>Undefined:</b>JavaScript creates space for this variable in memory and sets it to undefine</li>
-                <li><b>Mathematical Assignment Operators:</b> make it easy to calculate a new value and assign it to the same variable without writing the variable twice.
-                  <!-- <img src=".\images\java2.jpg" alt="" class="java2">  -->
-            </li>
-                <li><b>String Interpolation</b>: insert the content saved to a variable into a string.The + operator, known until now as the addition operator, is used to interpolate (insert) a string variable into a string</li>
-                <li><b>String Interpolation II</b>: after Java Es6 Instead of using quotes around the string, use backticks ``.Wrap your variable with ${myVariable}, followed by a sentence. No +s necessary. <img src="./images/java3.jpg" alt="" class="java3" width="auto" height="200px">
-
-                </li>
+                        </li>
               </ol>
               <br><br><br><br><hr width="50%">
 
@@ -233,6 +233,7 @@
                           <li>Functions that take a single parameter should not use parentheses.However, if a function takes zero or multiple parameters, parentheses are required. </li>
                           <li>Function composed of a sole single-line block is automatically returned. </li>
                           <li>Function composed of a sole single-line block does not need brackets.</li>
+                          <li>Arrow function are called anonymous functions as they dont have a name but they could be declared in a variable.</li>
                           <br><img src="./images/java13.jpg" alt="" ><br>
                       </ul>
                   </li>
