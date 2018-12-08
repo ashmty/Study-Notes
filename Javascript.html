@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>JavaScript</title>
     <link rel="stylesheet" href="css/Javascript.css">
+   
   </head>
   <body>
             <div class="banner">
@@ -11,12 +12,29 @@
             </div>
    
        <div class="shortcuts">
-      <ul>
+      <ul id="top">
                   <li><a href="index.html">Index</a></li>
                   <li><a href="html notes.html">Html</a></li>
                   <li><a href="Javascript.html">JavaScript</a></li>
       </ul>
       </div>
+
+      <nav class="navbar">
+            <ol>
+                        <li><button><a href="#intro">Java Introduction</a></button></li>
+                        <li><button><a href="#intro">Variables</a></button>  </li>
+                        <li><button><a href="#flow">Control Flow</a></button></li>
+                        <li><button><a href="#flow">Functions</a></button></li>
+                        <li><button><a href="#scope">scope</a></button></li>
+                        <li><button><a href="#array">Arrays</a></button></li>
+                        <li><button><a href="#loops">Loops</a></button></li>  
+                        <li><button><a href="#Iterators">Iterators</a></button></li>  
+                        <li><button><a href="#Iterators">Objects</a></button></li>
+                        <li><button><a href="#dom">Dom</a></button></li>
+                        
+            </ol>
+           
+      </nav>
       
       <div class="header">
             <h1>JavaScrpit</h1>
@@ -24,7 +42,7 @@
       </div>
 
     <div class="container">
-        <div class="intro">
+        <div class="intro" id="intro" > 
           <h2>Java Introduction</h2>
               <ol>
                     <li><b>The console.log()</b> command is used to print, or log, text to the console. eg. console.log("Hello!"); ctrl + shift + j open chrome Java console.; clear() to clear the console </li>
@@ -57,6 +75,12 @@
                                 <li>toString() method : eg.val = (5).toString()</li>
                                 <li>toNumber() convert number, to convert bolleans true= 1 , false = 0 , null = 0 if a string , will give Nan ( not a number)</li>
                                 <li>Coercion conversion: js automaticall converts eg number to a string  </li>
+                                <li>to convert from a string to a number
+                                      <ul>
+                                            <li>parseInt() # The parseInt() method converts a string into an integer (a whole number). It accepts two arguments. ... </li>
+                                            <li>parseFloat() # The parseFloat() method converts a string into a point number (a number with decimal points). ...</li>
+                                      </ul>
+                                </li>
                           </ul>
 
                     </li>
@@ -94,6 +118,9 @@
                               <li><b>val.split(' ')</b> split a string to an array based on the condition inside the ' ' </li>
                               <li><b>str.replace</b> str.replace('word to be replaced', 'word to replace') </li>
                               <li><b>str.includes('word')</b>: will result in true or false , check if the word in the string </li>
+                              <li>.startswith()</li>
+                              <li>.endswith()</li>
+                              <li>.repeat()</li>
                             </ul>
                     </li>
 
@@ -107,6 +134,7 @@
 
               </ol>
               <br><br><br><br><hr width="50%">
+              
           </div>
 
           <div class="Variables">
@@ -133,12 +161,16 @@
                         <li><b>String Interpolation II</b>: after Java Es6 Instead of using quotes around the string, use backticks ``.Wrap your variable with ${myVariable}, followed by a sentence. No +s necessary. <br> <img src="./images/java3.jpg" alt="" class="java3" width="auto" height="200px">
 
                         </li>
+                        <li> <i><b>tagged-templates</b></i>
+                              <ol>using a function to change a string with variables </ol>
+                        </li>
               </ol>
               <br><br><br><br><hr width="50%">
 
 
           </div>
-          <div class="flow">
+          <div class="flow" id="flow">
+            <span class="top"><a href="#top">Top</a></span>
             <h2>Control Flow</h2>
             <h4>Enable JavaScript programs to make decisions by executing code based on a condition.</h4>
                 <ol>
@@ -182,7 +214,7 @@
                     </ul>
 
                 </li>
-                <img src="./images/java7.jpg" alt="" class="java5" alt= width="400" height="auto">
+                <img src="./images/java7.jpg" alt="" class="java5" alt="" width="400" height="auto">
 
                 <li><b>switch Statements:</b>
                   <br><br> <ul>
@@ -199,6 +231,9 @@
                       <li>excution statment if true then : excution statment if false</li>
                     </ul>
                 </li>
+                <li>if shortcut we can use this argument to check if true or false,  <span>help? console.log('me') : ''</span> so check if help is true, if it is it console.log if not due to the "" it do nothing.   
+
+                </li>
 
 
 
@@ -207,6 +242,7 @@
 
           </div>
           <div class="Function">
+            
             <h2><b>Function:</b></h2>
             <h4> Is a block of code designed to perform a task.</h4>
               <ol>
@@ -229,13 +265,24 @@
                   </li>
                   <li><b>Arrow Functions:</b>short cuts for the arrow function:
                     <br><img src="./images/java11.jpg" alt="" ><br>
-                      <ul>
+                      <ol>
                           <li>Functions that take a single parameter should not use parentheses.However, if a function takes zero or multiple parameters, parentheses are required. </li>
-                          <li>Function composed of a sole single-line block is automatically returned. </li>
+                          <li>Function composed of a sole single-line block is automatically returned. (implicit)</li>
                           <li>Function composed of a sole single-line block does not need brackets.</li>
                           <li>Arrow function are called anonymous functions as they dont have a name but they could be declared in a variable.</li>
                           <br><img src="./images/java13.jpg" alt="" ><br>
-                      </ul>
+                          <li>This and arrow function: inherit from the window , if a function inside a function it inherit this from the original function </li>
+                          <li>When not to use arrow function :
+                                <ul>
+                                      <li> in case of addEvenListener as this in this case is related to the window of the Dom not the actual click</li>
+                                      <li>when we need a method to bind to an object</li>
+                                      <li>when you need to add prototype method</li>
+                                      <li>When you need many argument</li>
+
+
+                              </ul>   
+                        </li>
+                      </ol>
                   </li>
                   <li><b> IIFE (Immediately Invoked Function Expression)</b>:runs as soon as it is defined.<br>
                     (function () {<br>
@@ -248,11 +295,23 @@
                   <li> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" target="_blank">Function property object</a> :Since functions are a type of object, they have properties such as .length and .name and methods such as .toString()</li>
                   <li><i><b>Callback functions</b></i>:we can also pass functions (into other functions) as parameters. A higher-order function is a function that either accepts functions as parameters, returns a function, or both!</li>
                   <li><b><i>Functions as Parameters</i></b>: A higher-order function is a function that either accepts functions as parameters, returns a function, or both!</li>
+                  <li><b><i>Tagged Template</i></b>
+                        <ul>
+                              <li>creating Html Fragments with template Literals: </li>
+                              <li>Tagged template literals: using the name of the function in front of a variable then use function(strings,...value){debugger}</li>
+                              li
+                  
+                        </ul>
+                  
+                  
+                  
+                  </li>
 
               </ol>
               <br><br><br><br><hr width="50%">
           </div>
-          <div class="scope">
+          <div class="scope" id="scope">
+            <span class="top"><a href="#top">Top</a></span>    
             <h2><b>Scope</b></h2><br> where a variable can be accessed in a program.
                 <ol>
                       <li><b>Global Scope:</b> Variables defined in the global scope are declared outside of a set of curly braces {}, they are defined throughout the whole program , while Specific to the function if in between {}</li>
@@ -263,7 +322,7 @@
 
           </div>
 
-          <div class="Arrays">
+          <div class="Arrays" id="array">
             <h2><b>Arrays:</b></h2>JavaScript's way of making lists. These lists can store any data types (including strings, numbers, and booleans) and they are ordered, meaning each item has a numbered position.
                 <ol>
                       <li>to write and array : [ , , ], where [ is called array literal when empty]</li>
@@ -291,7 +350,8 @@
 
           </div>
 
-          <div class="Loops">
+          <div class="Loops" id="loops">
+                  <span class="top"><a href="#top">Top</a></span>
                 <h2>Loops: for(){}</h2>repeat a task multiple times
                     <ol>
                         <li>syntax: <br><img src="./images/java15.jpg" alt="" >
@@ -324,7 +384,7 @@
                     <br><br><br><br><hr width="50%">
 
           </div>
-          <div class="Iterators">
+          <div class="Iterators" id="Iterators">
 
               <h2><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Iterators:</a></h2>
                 <ol> <li>Iterate : loop over an array with a function <img src="./images/jsiteratoranatomy.bmp" alt=""></li>
@@ -347,8 +407,17 @@
                       
                     </li>
                     <li>.findIndex() Method: to find the location of an element in an array. and return an idex location. </li>
-                    <li> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce">.reduce() Method</a>:  returns a single value after iterating through the elements of an array, so reduce the array to 1 number ( sumation of the value) ,  thereby reducing the array,const reducer = (accumulator, currentValue) => accumulator + currentValue;<img src="./images/java19c.jpg" alt="">
-                        you can add a second argument to add to .reduce number.reduce ((accumulator, currentValue) =>{ accumulator + currentValue;} ,10 'second argument')
+                    <li> 
+                        <ul> 
+                               <li>
+                                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce">.reduce() Method</a>:  returns a single value after iterating through the elements of an array, so reduce the array to 1 number ( sumation of the value) ,  thereby reducing the array,const reducer = (accumulator, currentValue) => accumulator + currentValue;<img src="./images/java19c.jpg" alt="">
+                                    you can add a second argument to add to .reduce number.reduce ((accumulator, currentValue) =>{ accumulator + currentValue;} ,10 'second argument')
+                                </li>
+                                <li><a href="https://medium.freecodecamp.org/reduce-f47a7da511a9">string reduce</a>: 
+                                    
+                                </li>
+
+                          </ul>            
                     </li>
                     <li>.sort() : the filter iterator can help to arrange numbers from smaller to bigger syntax array.sort(function(a, b){return a-b})</li>
                 </ol>
@@ -357,6 +426,7 @@
           </div>
 
           <div class="Objects">
+                  <span class="top"><a href="#top">Top</a></span>
               <h2>Objects</h2>Objects are containers that can store data and functions. The data we store in an object is not ordered — we can only access it by calling its associated key.  Key: value , property: Value, ( the key/property: have the same rules as variables include naming.)
 
                   <ol>
@@ -434,15 +504,25 @@
                               </ul>
                         </li>
                        
-                        <li> add an array to an object within the object: for the object {_courses : ... } this._courses[courseName].push(dish), where courseName: dish is what we want to add.
-                  
+                        <li> add an array to an object within the object: for the object {_courses : ... } this._courses[courseName].push(dish), where courseName: dish is what we want to add. </li>
+
+                        <li><b><i>Destructuring objects</i></b> <br> Destructuring is a convenient way of extracting multiple values from data stored in (possibly nested) objects and Arrays. It can be used in locations that receive data 
+                              <ul>
+                                    <li>From an object: <br> can work for nested data as well.</li><img src="images/jsDest1.jpg" alt="" style="text-align:center"><img src="images/jsDest2.jpg" alt="" style="text-align:center">
+                                    <li>You can rename the destructed varialble: eg const { twitter:tweet, facebook:fb } = wes.links.social; so the new variable name is tweet </li>
+
+                              </ul>
+                        
+
+
+
                         </li>
                   </ol>
                   <br><br><br><br><hr width="50%">
 
           </div>
 
-          <div class="Dom">
+          <div class="Dom" id="dom">
               <h2>Dom:</h2> Document Object Model: Methods Objects Properties
                         <p>DOM, is a powerful tree-like structure that allows programmers to conceptualize hierarchy and access the elements on a web page, Dom : is the link between an HTML web page and scripting languages</p><span> <i>a node: </i>as an intersecting point in a tree that contains data eg. h1, body , p</span>
 
@@ -643,12 +723,20 @@
                   <br><br><br><br><hr width="50%">
 
 
+          </div >
+                  <ol>
+                     <li>Toggle: we can use this after the dom selector this.classList.toggle('.class') </li>
+                     <li>Timeout: setTimeout (function(){}) eg: setTimeout(function(){ alert("Hello"); }, 3000);</li>
+                  </ol>
+   
+          <div>
+
           </div>
 
 
     </div>
 
-
+    <script></script>
 
 
 
